@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<!-- remotes -->
+	<remote name="navin"
+		fetch="https://github.com/navin136" />
+	<remote name="varun"
+		fetch="https://gitlab.com/varunhardgamer" />
+
+<!-- Remove Source HALs -->
+  <remove-project name="android_hardware_qcom_audio" />
+  <remove-project name="android_hardware_qcom_display" />
+
+<!-- Device Specific Stuffs -->
+  <project path="device/asus/X00TD" name="android_device_asus_X00TD" remote="navin" revision="snow" />
+  <project path="vendor/asus" name="android_vendor_asus_X00TD" remote="navin" revision="snow" clone-depth="1" />
+  <project path="kernel/asus/sdm660" name="android_kernel_asus_X00TD" remote="navin" revision="snow" clone-depth="1" />
+
+<!-- Prebuilts -->
+  <project path="prebuilts/clang/host/linux-x86/trb_clang" name="trb_clang" revision="14" remote="varun" />
+
+<!-- HALs -->
+  <project path="hardware/qcom-caf/msm8998/audio" name="android_hardware_qcom-caf_audio_msm8998" revision="snow" remote="navin" />
+  <project path="hardware/qcom-caf/msm8998/display" name="android_hardware_qcom-caf_display_msm8998" revision="snow" remote="navin" />
+
+</manifest>
